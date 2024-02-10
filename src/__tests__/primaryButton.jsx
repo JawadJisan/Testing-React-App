@@ -9,8 +9,9 @@ describe("PrimaryButton()", () => {
     expect(element).toBeInTheDocument();
   });
   it("Should render correctly with the actionType if provided ", () => {
-    render(<PrimaryButton actionType="Post" />);
-    const element = screen.getByText();
+    const actionType = "Post";
+    render(<PrimaryButton actionType={actionType} />);
+    const element = screen.getByText(`Click to ${actionType}`);
     expect(element).toBeInTheDocument();
   });
 });
