@@ -1,5 +1,8 @@
+import FruitList from "./components/FruitList/FruitList";
 import PrimaryButton from "./components/PrimaryButton";
 import Users from "./components/Users/User";
+
+const fruits = ["apple", "banana", "orange", "mango", "pineapple"];
 
 const App = () => {
   return (
@@ -7,7 +10,9 @@ const App = () => {
       <h1>Hello World</h1>
       {/* <PrimaryButton />
       <PrimaryButton actionType="Delete" /> */}
-      <Users />
+      {/* <Users /> */}
+
+      <FruitList fruits={fruits} />
     </div>
   );
 };

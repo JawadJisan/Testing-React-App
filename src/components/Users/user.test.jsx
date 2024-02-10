@@ -22,6 +22,9 @@ it("should render the component", () => {
   const headingElement = screen.getByRole("heading", {
     level: 2,
   });
+  const button = screen.queryByRole("button", {
+    name: "submit",
+  });
 
   expect(element).toBeInTheDocument();
   expect(element3).toBeInTheDocument();
@@ -33,4 +36,5 @@ it("should render the component", () => {
   expect(element8).toBeInTheDocument();
   expect(element9).toBeInTheDocument();
   expect(headingElement).toBeInTheDocument();
+  expect(button).not.toBeInTheDocument();
 });
